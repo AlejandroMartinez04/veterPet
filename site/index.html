@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Inicio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <style>
+     .welcome-text {
+    font-size: 2.5em; /* Tamaño del texto ajustado */
+    font-weight: bold;
+    color: #0056b3; /* Color de texto más sobrio y profesional */
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    border-radius: 10px; /* Bordes redondeados para dar un toque más moderno */
+}
+
+.scrolling-text {
+    display: inline-block;
+    padding-left: 100%;
+    position: absolute;
+    animation: scroll-text 10s linear infinite;
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hacer el texto responsive */
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 1.8em; /* Reducir el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+    </style>
+    <script type="text/javascript" src="js/include_script.js"></script>
+</head>
+<body>
+    <div id="webSiteLoader"></div>
+    <div id="pageLoader"><div></div></div>
+    <img class="image_resize" src="img/bg_pic.jpg" alt="">
+
+    <!-- Texto en movimiento mejorado -->
+<div class="welcome-text">
+    <span class="scrolling-text">Bienvenidos a PETS, tu veterinaria de confianza</span>
+</div>
+
+
+    <div id="wrapper">
+        <div class="leftPanel">
+            <!--menu-->
+            <div class="menuMov">
+                <div class="menu">
+                    <ul class="sf-menu">
+                        <li><a href="index.html"><div class="mText">Inicio</div></a></li>
+                        <li><a href=""><div class="mText">Tramites</div></a>
+                            <ul class="submenu_1">
+                                <li><a href="">Registros</a>
+                                    <ul class="submenu_2">
+                                        <li><a href="registroCliente.php">Cliente</a></li>
+                                        <li><a href="Registrar_vacuna.php">Medicamentos</a></li>
+                                        <li><a href="registromascota.html">Mascota</a></li>
+                                    </ul> 
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="index2.html"><div class="mText">Ventas</div></a></li>
+                        <li><a href="Listado.php"><div class="mText">Listados</div></a></li>
+                        
+                        <li><a href="contacto.html"><div class="mText">contacto</div></a></li>
+                    </ul>
+                </div>            
+            </div>
+            <div class="menuButton">
+                <a href="#"><img src="img/menu_nav.png" alt=""></a>
+            </div>
+        </div>
+
+        <!--header-->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="span12">
+                        <!--logo and company name-->        
+                        <h1><a href="index.html" id="logo">PETS S.A</a></h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--content-->    
+        <div class="containerHolder">
+            <section>
+                <div class="container">
+                    <div class="dynamicContent">
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--footer-->    
+        <footer>
+            <div class="container">
+                <div class="row pad_1">
+                    <div class="span5">
+                        <ul class="social-icon">
+                            <li><a href="#"><img class="animate" src="img/soc_icon1.png" alt=""></a></li>
+                            <li><a href="#"><img class="animate" src="img/soc_icon2.png" alt=""></a></li>
+                            <li><a href="#"><img class="animate" src="img/soc_icon3.png" alt=""></a></li>
+                            <li><a href="#"><img class="animate" src="img/soc_icon4.png" alt=""></a></li>
+                        </ul>
+                        <div class="block_info1">
+                            <p>PETS S.A. Todos los derechos reservados.&copy; 2024 <span class="color_3">&bull;</span> <a class="link_0 animate" href="index7.html">Privacy Policy</a>&nbsp;<!-- {%FOOTER_LINK} --></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>    
+    </div>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    
+
+</body>
+</html>
+
+

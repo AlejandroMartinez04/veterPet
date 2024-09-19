@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>venta</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+ 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/preview.css" type="text/css">
+	<script type="text/javascript" src="js/include_script.js"></script>
+  	<!--[if lt IE 9]>
+	   	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	    <link href="css/ie.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+</head>
+<body>
+<!--content wrapper-->
+	<div id="wrapper">
+		<section>
+			<div class="dynamicContent">
+				<div class="inner">
+					<div class="container">
+						<div class="row">
+							<div class="span5">
+								<div class="title">
+									<h2>venta<span class="color_1">.</span></h2>
+									<img src="img/separator.png" alt="" class="marg_2">
+								</div>
+								<div class="scroll">
+									<div>
+										<ul class="gall_1">
+											<li>
+			                                    <div class="thumbnail">
+													<a href="img/page2_big1.jpg"><img src="img/page2_pic1.jpg" alt=""></a>
+													<div class="caption">
+														<p><a href="#" class="link_1">Bulldog francés 1</a><span></span></p>
+													</div>
+												</div>  
+											</li>
+											<li class="f-right">
+			                                    <div class="thumbnail">
+													<a href="img/page2_big2.jpg"><img src="img/page2_pic2.jpg" alt=""></a>
+													<div class="caption">
+														<p><a href="#" class="link_1">Bulldog francés 2</a><span></span></p>
+													</div>
+												</div>  
+											</li>
+											<li>
+			                                    <div class="thumbnail">
+													<a href="img/page2_big3.jpg"><img src="img/page2_pic3.jpg" alt=""></a>
+													<div class="caption">
+														<p><a href="#" class="link_1">Bulldog francés 3</a><span></span></p>
+													</div>
+												</div>  
+											</li>
+											
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+								<div class="scroll-btns">
+									<a href="#" data-type="scrollDown" class="btndown"><span></span></a>
+									<a href="#" data-type="scrollUp" class="btnup"><span></span></a>
+								</div>	
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script>
+		$('.btn1').find('span').css({opacity:'0'});
+
+		$('.btn1').hover(function()
+			{
+				$(this).find('span').css({opacity:'0'}).stop().animate({opacity:'1'}, 500,'easeOutCubic');			
+			}, function(){
+				$(this).find('span').stop().animate({opacity:'0'}, 500,'easeOutCubic');
+			});
+
+
+		var MSIE = ($.browser.msie) && ($.browser.version <= 8);
+
+		$('.gall_1 .thumbnail > a').attr('rel','appendix')
+	    .prepend('<span class="sitem_over"><strong></strong></span>')
+	    $('.gall_1 .thumbnail > a').fancybox({
+	        'transitionIn': 'elastic',
+	    	'transitionOut': 'elastic',
+	    	'speedIn': 500,
+	    	'speedOut': 300,
+	        'centerOnScroll': true,
+	        'overlayColor': '#000'
+	    });
+		
+		$('.gall_1 .thumbnail > a')
+	    .find('strong').css('top','200px').end()
+	    .hover(
+	        function(){
+	            if (!MSIE){
+	                $(this).children('.sitem_over').css({display:'block',opacity:'0'}).stop().animate({'opacity':1}).end() 
+	                .find('strong').css({'opacity':0}).stop().animate({'opacity':1,'top':'0'},350,'easeInOutExpo');
+	            } else { 
+	                $(this).children('.sitem_over').stop().show().end()
+	                .find('strong').stop().show().css({'top':'0'});
+	            }
+	        },
+	        function(){
+	            if (!MSIE){
+	                $(this).children('.sitem_over').stop().animate({'opacity':0},1000,'easeOutQuad',function(){$(this).children('.sitem_over').css({display:'none'})}).end()  
+	                .find('strong').stop().animate({'opacity':0,'top':'200px'},1000,'easeOutQuad');  
+	            } else {
+	                $(this).children('.sitem_over').stop().hide().end()
+	                .find('strong').stop().hide();
+	            }            
+	        }
+	    );
+	</script>
+</body>
+</html>

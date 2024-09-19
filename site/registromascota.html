@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>registro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/preview.css" type="text/css">
+    <script type="text/javascript" src="js/include_script.js"></script>
+</head>
+<body>
+    <!--content wrapper-->
+    <div id="wrapper">
+        <section>
+            <div class="dynamicContent">
+                <div class="inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="span5 center">
+                                <img src="img/page1_pic1.jpg" alt="" class="marg_1">
+                                <h2>Bienvenido<span class="color_1">.</span></h2>
+                                <img src="img/separator.png" alt="" class="marg_2">
+                                
+								<div class="col-sm-4 offset-sm-4">
+									<br>
+									<form action="guardar_mascota.php" method="post">
+										<H3>
+											<b><label for="codigo">REGISTRO DE MASCOTA:</label></b>
+										</H3>
+							
+										<div class="mb-3">
+											<b><label for="codigo">CODIGO:</label></b>
+											<input class="form-control" type="text" name="codigo" id="codigo" required>
+										</div>
+										<div class="mb-3">
+											<b><label for="nombre">NOMBRE:</label></b>
+											<input class="form-control" type="text" name="nombre" id="nombre" required>
+										</div>
+										<div class="mb-3">
+											<b><label for="fecha_nacimiento">FECHA DE NACIMIENTO:</label></b>
+											<input class="form-control" type="date" name="fecha_nacimiento" id="fecha_nacimiento" required>
+										</div>
+										<div class="mb-3">
+											<b><label for="raza">RAZA:</label></b>
+											<input class="form-control" type="text" name="raza" id="raza" required>
+										</div>
+										<div class="mb-3">
+											<b><label for="peso">PESO:</label></b>
+											<input class="form-control" type="number" name="peso" id="peso" required>
+                                            <select class="form-control mt-2" name="unidad_peso" id="unidad_peso" required>
+                                                <option value="" disabled selected>Seleccione unidad</option>
+                                                <option value="kg">Kilogramos</option>
+                                                <option value="g">Gramos</option>
+                                            </select>
+										</div>
+										<input type="hidden" name="editar" id="" value='no' readonly>
+										<input class="btn btn-outline-primary" type="submit" value="GUARDAR">
+									</form>
+								</div>
+							
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+
+    <!-- Validación de campos vacíos y peso -->
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let codigo = document.getElementById('codigo').value.trim();
+            let nombre = document.getElementById('nombre').value.trim();
+            let fecha_nacimiento = document.getElementById('fecha_nacimiento').value.trim();
+            let raza = document.getElementById('raza').value.trim();
+            let peso = document.getElementById('peso').value.trim();
+            let unidad_peso = document.getElementById('unidad_peso').value.trim();
+
+            if (!codigo || !nombre || !fecha_nacimiento || !raza || !peso || !unidad_peso) {
+                alert('Todos los campos son obligatorios.');
+                event.preventDefault(); // Detiene el envío del formulario si hay campos vacíos
+            }
+        });
+    </script>
+    
+</body>
+</html>
